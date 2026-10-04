@@ -1,0 +1,598 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+button,
+input,
+textarea{
+  touch-action:manipulation;
+}
+
+button{
+  min-height:44px;
+}
+
+textarea{
+  font-size:16px;
+}
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media(max-width:1150px){
+
+  .hero-stage{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  .hero-copy{
+    max-width:800px;
+  }
+
+  .hero-copy h1{
+    max-width:9ch;
+  }
+
+  .hero-object{
+    min-height:500px;
+  }
+
+  .request-layout{
+    grid-template-columns:190px 1fr;
+  }
+
+  .proposal-workspace{
+    grid-template-columns:1fr;
+  }
+
+  .proposal-controls{
+    position:static;
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .proposal-controls .control-label,
+  .control-message{
+    grid-column:1/-1;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:800px){
+
+  .topbar{
+    min-height:70px;
+  }
+
+  .edition{
+    display:none;
+  }
+
+  .intro{
+    padding-top:4rem;
+    padding-bottom:6rem;
+  }
+
+  .intro-meta{
+    margin-bottom:3.5rem;
+  }
+
+  .hero-stage{
+    min-height:0;
+  }
+
+  .hero-copy h1{
+    font-size:clamp(3.8rem,11vw,6.8rem);
+  }
+
+  .hero-object{
+    min-height:470px;
+  }
+
+  .orbit{
+    width:360px;
+    height:360px;
+  }
+
+  .orbit-two{
+    width:285px;
+    height:285px;
+  }
+
+  .request-layout{
+    grid-template-columns:1fr;
+  }
+
+  .request-side{
+    display:block;
+  }
+
+  .request-side p{
+    max-width:500px;
+  }
+
+  .example-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem;
+  }
+
+  .example-list > span{
+    width:100%;
+  }
+
+  .example-btn{
+    width:auto;
+    flex:1 1 30%;
+  }
+
+  .extraction-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .proposal-paper{
+    min-height:650px;
+  }
+
+}
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media(max-width:600px){
+
+  .topbar{
+    width:min(calc(100% - 28px),var(--max-width));
+    padding-top:var(--safe-top);
+  }
+
+  .brand-name{
+    letter-spacing:.13em;
+  }
+
+  .top-link{
+    min-height:40px;
+    padding:.6rem .75rem;
+    font-size:.55rem;
+  }
+
+  .intro,
+  .demo-section,
+  .proposal-section,
+  .final-section,
+  .footer{
+    width:min(calc(100% - 28px),var(--max-width));
+  }
+
+  .intro{
+    padding-top:3rem;
+    padding-bottom:5rem;
+  }
+
+  .intro-meta{
+    margin-bottom:3rem;
+    font-size:.5rem;
+  }
+
+  .intro-meta span:nth-child(2){
+    display:none;
+  }
+
+  .hero-stage{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
+
+  .hero-copy h1{
+    max-width:8.5ch;
+    font-size:clamp(3.5rem,16vw,6rem);
+  }
+
+  .hero-description{
+    margin-top:1.8rem;
+    font-size:.9rem;
+    line-height:1.7;
+  }
+
+  .hero-proof{
+    margin-top:1.8rem;
+    gap:.8rem 1.2rem;
+    font-size:.5rem;
+  }
+
+  .hero-object{
+    min-height:390px;
+    margin-top:1rem;
+  }
+
+  .orbit{
+    width:285px;
+    height:285px;
+  }
+
+  .orbit-two{
+    width:225px;
+    height:225px;
+  }
+
+  .floating-card{
+    width:min(280px,76vw);
+    padding:1rem;
+  }
+
+  .card-back{
+    transform:translate(-25px,-35px) rotate(-7deg);
+  }
+
+  .card-front{
+    transform:translate(25px,25px) rotate(4deg);
+  }
+
+  .card-title{
+    font-size:1.45rem;
+  }
+
+  .card-value{
+    font-size:2rem;
+  }
+
+  .depth-label{
+    bottom:15px;
+    font-size:.48rem;
+  }
+
+  /* sections */
+
+  .section-head{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:1.2rem;
+    padding:5rem 0 2.5rem;
+  }
+
+  .section-head h2,
+  .proposal-intro h2{
+    font-size:clamp(2.5rem,11vw,4.5rem);
+  }
+
+  .live-label{
+    font-size:.48rem;
+  }
+
+  /* request */
+
+  .request-layout{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    padding-bottom:5rem;
+  }
+
+  .request-number{
+    margin-bottom:.7rem;
+    font-size:2.3rem;
+  }
+
+  .request-side p{
+    margin-bottom:1.3rem;
+    font-size:.72rem;
+  }
+
+  .example-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.45rem;
+  }
+
+  .example-list > span{
+    width:100%;
+  }
+
+  .example-btn{
+    flex:1 1 30%;
+    min-height:44px;
+    padding:.65rem;
+  }
+
+  .example-btn span{
+    font-size:.58rem;
+  }
+
+  .example-btn small{
+    display:none;
+  }
+
+  .request-card{
+    padding:.7rem;
+  }
+
+  .request-card textarea{
+    min-height:220px;
+    padding:1rem;
+    font-size:1rem;
+  }
+
+  .card-bottom{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .keyboard-hint{
+    display:none;
+  }
+
+  .transform-button{
+    width:100%;
+  }
+
+  /* extraction */
+
+  .extraction-section{
+    padding-bottom:5rem;
+  }
+
+  .extraction-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .extract-card{
+    min-height:145px;
+    padding:.8rem;
+  }
+
+  .extract-card input{
+    font-size:1rem;
+  }
+
+  .pricing-bar{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .price-editor{
+    width:100%;
+  }
+
+  .price-editor input{
+    width:100%;
+  }
+
+  .continue-button{
+    width:100%;
+  }
+
+  /* proposal */
+
+  .proposal-section{
+    padding-bottom:5rem;
+  }
+
+  .proposal-intro{
+    padding-top:4.5rem;
+  }
+
+  .proposal-workspace{
+    margin-top:2.8rem;
+  }
+
+  .proposal-paper{
+    min-height:560px;
+    padding:1.2rem;
+    transform:none;
+  }
+
+  .proposal-paper:hover{
+    transform:translateY(-3px);
+  }
+
+  .paper-title{
+    padding:3.2rem 0 2rem;
+  }
+
+  .paper-title h3{
+    font-size:clamp(2.5rem,13vw,4.2rem);
+  }
+
+  .paper-grid{
+    grid-template-columns:1fr;
+    gap:1rem;
+  }
+
+  .paper-price-row{
+    grid-template-columns:95px 1fr;
+  }
+
+  .paper-total strong{
+    font-size:2rem;
+  }
+
+  .paper-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.5rem;
+  }
+
+  .proposal-controls{
+    grid-template-columns:1fr;
+  }
+
+  .proposal-controls .control-label,
+  .control-message{
+    grid-column:auto;
+  }
+
+  /* preview */
+
+  .client-preview{
+    padding:
+      .7rem
+      calc(.7rem + var(--safe-right))
+      calc(.7rem + var(--safe-bottom))
+      calc(.7rem + var(--safe-left));
+  }
+
+  .client-document{
+    max-height:94dvh;
+    padding:1.2rem;
+  }
+
+  .client-brand{
+    padding:3rem 0 2rem;
+  }
+
+  .client-brand h2{
+    font-size:clamp(2.6rem,14vw,4rem);
+  }
+
+  .client-details{
+    grid-template-columns:1fr;
+    gap:1.1rem;
+  }
+
+  .client-total{
+    align-items:flex-start;
+  }
+
+  .client-total strong{
+    font-size:2rem;
+  }
+
+  .client-footer{
+    flex-direction:column;
+  }
+
+  /* final */
+
+  .final-section{
+    padding-top:7rem;
+    padding-bottom:8rem;
+  }
+
+  .final-section h2{
+    font-size:clamp(3.5rem,15vw,6rem);
+  }
+
+  .footer{
+    flex-direction:column;
+    gap:.7rem;
+  }
+
+  .mobile-action{
+    display:block;
+  }
+
+  .toast{
+    right:14px;
+    bottom:90px;
+    left:14px;
+    max-width:none;
+  }
+}
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media(max-width:390px){
+
+  .brand-name{
+    font-size:.6rem;
+  }
+
+  .top-link{
+    padding:.55rem .65rem;
+  }
+
+  .hero-copy h1{
+    font-size:3.3rem;
+  }
+
+  .hero-object{
+    min-height:345px;
+  }
+
+  .floating-card{
+    width:245px;
+  }
+
+  .example-btn{
+    flex:1 1 100%;
+  }
+
+  .extraction-grid{
+    grid-template-columns:1fr;
+  }
+
+  .paper-price-row{
+    grid-template-columns:1fr;
+    gap:.3rem;
+  }
+
+  .paper-price-row strong{
+    font-size:.9rem;
+  }
+
+  .paper-total{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .final-section h2{
+    font-size:3.2rem;
+  }
+}
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media(hover:none){
+
+  .top-link:hover,
+  .example-btn:hover,
+  .request-card:hover,
+  .proposal-paper:hover,
+  .control-button:hover,
+  .transform-button:hover,
+  .continue-button:hover{
+    transform:none;
+    box-shadow:none;
+  }
+
+  .top-link:active,
+  .example-btn:active,
+  .transform-button:active,
+  .continue-button:active,
+  .control-button:active{
+    transform:scale(.98);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}

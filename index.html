@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1,
+      viewport-fit=cover">
+
+<meta name="theme-color" content="#08090b">
+<meta name="color-scheme" content="dark">
+
+<meta name="description"
+      content="QuoteFlow turns messy client requests into polished professional proposals in minutes.">
+
+<title>QuoteFlow — From message to money-ready proposal</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="site-noise" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="topbar">
+
+  <a href="#" class="brand" aria-label="QuoteFlow home">
+    <span class="brand-mark">
+      <span></span>
+      <span></span>
+    </span>
+
+    <span class="brand-name">QUOTEFLOW</span>
+  </a>
+
+  <div class="topbar-right">
+
+    <span class="edition">
+      VALIDATION EDITION
+    </span>
+
+    <button
+      class="top-link"
+      id="jumpDemo"
+      type="button">
+      Try it
+      <span>↘</span>
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="intro">
+
+  <div class="intro-meta">
+    <span>01 / 04</span>
+    <span>QUOTE INTELLIGENCE</span>
+    <span>ONLINE</span>
+  </div>
+
+  <div class="hero-stage">
+
+    <div class="hero-copy">
+
+      <p class="eyebrow">
+        For freelancers who hate starting from scratch
+      </p>
+
+      <h1>
+        A client sends a
+        <em>message.</em>
+        You send back
+        <span>a quote.</span>
+      </h1>
+
+      <p class="hero-description">
+        QuoteFlow turns an unstructured client request into
+        a clear scope, timeline, revisions and professional
+        pricing — without rebuilding the same proposal every time.
+      </p>
+
+      <div class="hero-proof">
+
+        <span>
+          <i></i>
+          No account required for the demo
+        </span>
+
+        <span>
+          <i></i>
+          Built for independent work
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-object" aria-hidden="true">
+
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+
+      <div class="floating-card card-back">
+
+        <span>CLIENT REQUEST</span>
+
+        <div class="fake-lines">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+      </div>
+
+      <div class="floating-card card-front">
+
+        <div class="mini-top">
+          <span>QUOTEFLOW</span>
+          <b>01</b>
+        </div>
+
+        <div class="mini-title">
+          Proposal
+          <br>
+          generated.
+        </div>
+
+        <div class="mini-price">
+          <small>ESTIMATED VALUE</small>
+          <strong>$170</strong>
+        </div>
+
+        <div class="mini-line"></div>
+
+        <div class="mini-footer">
+          <span>Scope</span>
+          <span>Ready</span>
+        </div>
+
+      </div>
+
+      <div class="depth-label">
+        MESSAGE → QUOTE
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     DEMO / EXTRACTION
+===================================================== -->
+
+<section class="extraction-section" id="demo">
+
+  <div class="workspace">
+
+    <div class="section-head">
+
+      <div>
+        <span class="section-kicker">THE TRANSFORMATION</span>
+
+        <h2>
+          Give it the messy part.
+          <br>
+          Keep the professional part.
+        </h2>
+      </div>
+
+      <span class="live-label">
+        <i></i>
+        LIVE DEMO
+      </span>
+
+    </div>
+
+
+    <div class="request-layout">
+
+      <aside class="request-side">
+
+        <div class="request-number">
+          01
+        </div>
+
+        <p>
+          Paste what your client actually sent you.
+          It doesn't need to be clean.
+        </p>
+
+        <div class="example-list">
+
+          <span>TRY AN EXAMPLE</span>
+
+          <button
+            class="example-btn"
+            type="button"
+            data-example="Hey, I need a logo and 6 Instagram posts for my new clothing brand. Can you finish everything within 5 days? I think 2 revisions should be enough.">
+
+            <span>Brand identity</span>
+            <b>↗</b>
+
+          </button>
+
+          <button
+            class="example-btn"
+            type="button"
+            data-example="I need a simple portfolio website for my photography business. Around 5 pages. I'd like it done within 10 days with 2 rounds of revisions.">
+
+            <span>Portfolio website</span>
+            <b>↗</b>
+
+          </button>
+
+          <button
+            class="example-btn"
+            type="button"
+            data-example="Can you edit 4 short videos for TikTok and Instagram? I need them ready in 7 days and I'd like one revision per video.">
+
+            <span>Video editing</span>
+            <b>↗</b>
+
+          </button>
+
+        </div>
+
+      </aside>
+
+
+      <div class="request-card">
+
+        <div class="card-top">
+
+          <span>CLIENT MESSAGE</span>
+
+          <span>
+            <b id="characterCount">0 characters</b>
+          </span>
+
+        </div>
+
+        <textarea
+          id="clientRequest"
+          spellcheck="true"
+          autocomplete="off"
+          placeholder="Paste a client message here...
+
+Example:
+I need a logo and some Instagram content for my new brand. I'd like everything ready in 5 days with 2 revisions."></textarea>
+
+
+        <div class="card-bottom">
+
+          <span class="keyboard-hint">
+            <kbd>⌘</kbd>
+            <kbd>ENTER</kbd>
+            to transform
+          </span>
+
+          <button
+            class="transform-button"
+            id="transformBtn"
+            type="button">
+
+            <span>Transform request</span>
+            <strong>→</strong>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- EXTRACTION -->
+
+    <div id="extractionSection" class="extraction-inner">
+
+      <div class="confidence">
+
+        <span>
+          STRUCTURED SIGNAL
+        </span>
+
+        <strong id="confidenceValue">
+          0%
+        </strong>
+
+      </div>
+
+
+      <div class="extraction-grid">
+
+        <article class="extract-card">
+
+          <span class="extract-index">01</span>
+
+          <div class="extract-content">
+
+            <small>SERVICE</small>
+
+            <input
+              id="serviceInput"
+              value="—"
+              aria-label="Service">
+
+          </div>
+
+        </article>
+
+
+        <article class="extract-card">
+
+          <span class="extract-index">02</span>
+
+          <div class="extract-content">
+
+            <small>DELIVERABLES</small>
+
+            <input
+              id="deliverablesInput"
+              value="—"
+              aria-label="Deliverables">
+
+          </div>
+
+        </article>
+
+
+        <article class="extract-card">
+
+          <span class="extract-index">03</span>
+
+          <div class="extract-content">
+
+            <small>TIMELINE</small>
+
+            <input
+              id="timelineInput"
+              value="—"
+              aria-label="Timeline">
+
+          </div>
+
+        </article>
+
+
+        <article class="extract-card">
+
+          <span class="extract-index">04</span>
+
+          <div class="extract-content">
+
+            <small>REVISIONS</small>
+
+            <input
+              id="revisionsInput"
+              value="—"
+              aria-label="Revisions">
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div class="pricing-bar">
+
+        <div>
+          <span>YOUR STARTING PRICE</span>
+          <small>Editable before proposal generation</small>
+        </div>
+
+        <label class="price-editor">
+
+          <span>$</span>
+
+          <input
+            id="basePrice"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            value="80"
+            aria-label="Starting price">
+
+        </label>
+
+        <button
+          class="continue-button"
+          id="continueBtn"
+          type="button">
+
+          Build proposal
+          <span>↗</span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPOSAL
+===================================================== -->
+
+<section class="proposal-section" id="proposalSection">
+
+  <div class="workspace">
+
+    <div class="proposal-intro">
+
+      <span class="section-kicker">
+        THE OUTPUT
+      </span>
+
+      <h2>
+        From rough request
+        <br>
+        to something worth sending.
+      </h2>
+
+      <p>
+        The prototype shows the exact moment QuoteFlow
+        turns scattered information into a client-facing
+        commercial document.
+      </p>
+
+    </div>
+
+
+    <div class="proposal-workspace">
+
+      <div class="proposal-paper">
+
+        <div class="paper-top">
+
+          <span>QUOTE / PROPOSAL</span>
+
+          <span id="proposalDate">
+            —
+          </span>
+
+        </div>
+
+
+        <div class="paper-title">
+
+          <small>PROJECT</small>
+
+          <h3 id="proposalTitle">
+            Your project
+          </h3>
+
+          <p id="proposalSubtitle">
+            Define the scope to begin.
+          </p>
+
+        </div>
+
+
+        <div class="paper-grid">
+
+          <div class="paper-block">
+
+            <span>SERVICE</span>
+
+            <strong id="paperService">
+              —
+            </strong>
+
+          </div>
+
+          <div class="paper-block">
+
+            <span>TIMELINE</span>
+
+            <strong id="paperTimeline">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="paper-divider">
+        </div>
+
+
+        <div
+          id="proposalLines"
+          class="proposal-lines">
+
+          <div class="paper-price-row">
+
+            <p>
+              Scope
+            </p>
+
+            <strong>
+              —
+            </strong>
+
+          </div>
+
+          <div class="paper-price-row">
+
+            <p>
+              Timeline
+            </p>
+
+            <strong>
+              —
+            </strong>
+
+          </div>
+
+          <div class="paper-price-row">
+
+            <p>
+              Revisions
+            </p>
+
+            <strong>
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="paper-total">
+
+          <span>TOTAL PROJECT VALUE</span>
+
+          <strong id="paperPrice">
+            $0
+          </strong>
+
+        </div>
+
+
+        <div class="paper-bottom">
+
+          <span>
+            Generated with QuoteFlow
+          </span>
+
+          <span>
+            VALIDATION PROTOTYPE
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <aside class="proposal-controls">
+
+        <span class="control-label">
+          NEXT ACTION
+        </span>
+
+        <button
+          class="control-button primary-control"
+          id="generateBtn"
+          type="button">
+
+          <span>Open client view</span>
+          <b>↗</b>
+
+        </button>
+
+        <button
+          class="control-button"
+          id="previewBtn"
+          type="button">
+
+          Preview
+
+        </button>
+
+        <button
+          class="control-button"
+          id="copyBtn"
+          type="button">
+
+          Copy share link
+
+        </button>
+
+        <p
+          class="control-message"
+          id="controlMessage">
+
+          Your proposal is ready to become a client-facing page.
+
+        </p>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CLIENT PREVIEW
+===================================================== -->
+
+<section
+  class="client-preview"
+  id="clientPreview"
+  aria-hidden="true">
+
+  <div class="client-document">
+
+    <div class="client-preview-top">
+
+      <span>
+        QUOTEFLOW
+      </span>
+
+      <button
+        id="closePreview"
+        type="button"
+        aria-label="Close preview">
+
+        ×
+
+      </button>
+
+    </div>
+
+
+    <div class="client-brand">
+
+      <span>
+        PROJECT PROPOSAL
+      </span>
+
+      <h2 id="clientTitle">
+        Project Proposal
+      </h2>
+
+      <p>
+        Prepared through QuoteFlow
+      </p>
+
+    </div>
+
+
+    <div class="client-label">
+      PROJECT SUMMARY
+    </div>
+
+
+    <div class="client-details">
+
+      <div>
+
+        <span>SERVICE</span>
+
+        <strong id="clientService">
+          —
+        </strong>
+
+      </div>
+
+      <div>
+
+        <span>TIMELINE</span>
+
+        <strong id="clientTimeline">
+          —
+        </strong>
+
+      </div>
+
+      <div>
+
+        <span>REVISIONS</span>
+
+        <strong id="clientRevisions">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="client-total">
+
+      <div>
+
+        <span>TOTAL PROJECT VALUE</span>
+
+        <small>
+          Scope confirmed
+        </small>
+
+      </div>
+
+      <strong id="clientTotal">
+        $0
+      </strong>
+
+    </div>
+
+
+    <button
+      class="client-accept"
+      type="button">
+
+      Proposal looks good
+      <span>→</span>
+
+    </button>
+
+
+    <footer class="client-footer">
+
+      <span>
+        Generated with QuoteFlow
+      </span>
+
+      <span>
+        Professional proposals,
+        minus the busywork.
+      </span>
+
+    </footer>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL VALIDATION CTA
+===================================================== -->
+
+<section class="final-section">
+
+  <span class="final-number">
+    04
+  </span>
+
+  <span class="final-kicker">
+    THE IDEA
+  </span>
+
+  <h2>
+    Stop writing
+    <br>
+    the same quote
+    <br>
+    twice.
+  </h2>
+
+  <p>
+    QuoteFlow is being shaped around one simple promise:
+    turn a messy client request into something professional
+    enough to send.
+  </p>
+
+  <button
+    class="final-cta"
+    id="restartBtn"
+    type="button">
+
+    <span>Build another quote</span>
+    <b>↗</b>
+
+  </button>
+
+</section>
+
+
+<footer class="footer">
+
+  <div>
+    <strong>QUOTEFLOW</strong>
+    <span>QUOTE INTELLIGENCE FOR INDEPENDENTS.</span>
+  </div>
+
+  <span>
+    VALIDATION PROTOTYPE · 2026
+  </span>
+
+</footer>
+
+
+<div class="mobile-action">
+
+  <button
+    id="mobileTransform"
+    type="button">
+
+    Transform request
+    <span>→</span>
+
+  </button>
+
+</div>
+
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite">
+
+  <span id="toastMessage">
+    Ready.
+  </span>
+
+</div>
+
+</main>
+
+
+<script src="js/animations.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
